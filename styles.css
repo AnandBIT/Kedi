@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Mono', monospace;
+	color: #fff;
+}
+
+html {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background-image: url('./images/Group\ 2318.svg');
+	background-color: black;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-size: contain;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.image {
+	position: absolute;
+	bottom: 0%;
+	width: 25%;
+	min-width: 350px;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	right: 0;
+}
+
+.center {
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: -20vh;
+	transform: translateX(-45%) rotate(-7.49deg);
+	width: 110%;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 4rem;
+	font-weight: 400;
+	text-align: center;
+	backdrop-filter: blur(10px);
+}
+
+form {
+	margin-top: 1.5rem;
+}
+input {
+	padding: 0.5rem 1rem;
+	font-size: 2rem;
+	background: transparent;
+	border: 2px solid #349a36;
+	outline: 2px solid #349a36;
+	border-radius: 2px;
+	backdrop-filter: blur(10px);
+}
+
+#show {
+	display: none;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	justify-content: flex-start;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+button {
+	padding: 1rem 2.5rem;
+	background: #349a36;
+	color: #000;
+	border: 2px solid #349a36;
+	outline: none;
+	margin-top: 2rem;
+	font-size: 2rem;
+	border-radius: 2px;
+	transition: all 300ms ease-in-out;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #000;
+	color: #349a36;
+}
+
+.back {
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+	.image {
+		min-width: 280px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.main,
+	#show {
+		position: relative;
+		bottom: 10%;
+	}
+
+	h1 {
+		font-size: 1rem;
+		line-height: 2.5rem;
+		font-weight: 300;
+	}
+	form {
+		margin-top: 1rem;
+	}
+	input {
+		font-size: 1rem;
+		border: 1px solid #349a36;
+		outline: 1px solid #349a36;
+		border-radius: 1px;
+		padding: 0.5rem;
+	}
+	.image {
+		min-width: 180px;
+	}
+
+	button {
+		font-size: 1rem;
+		padding: 0.5rem 1.25rem;
+		border: 1px solid #349a36;
+	}
+
+	.left,
+	.right {
+		display: none;
+	}
+
+	.center {
+		display: block;
+	}
+}
+
+@media only screen and (min-height: 650px) {
+	.center {
+		bottom: -16vh;
+	}
+}
+
+@media only screen and (min-height: 900px) {
+	.center {
+		bottom: -12vh;
+	}
+}
